@@ -1,0 +1,425 @@
+
+
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+
+
+
+<div class="popup" id="js-popup">
+  <div class="popup-inner">
+  
+    <font face="sans-serif" style="font-size:35px;">
+pop1
+  </div>
+  <div class="black-background" id="js-black-bg"></div>
+</div>
+
+<img onClick="popupImage1()" id="js-show-popup" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Almost_black_square_020305.png" height="20%">
+<div style="padding:3px;"></div>
+
+
+
+
+<div class="popup2" id="js-popup2">
+  <div class="popup-inner2">
+
+    <font face="sans-serif" style="font-size:35px;">
+pop2
+  </div>
+  <div class="black-background2" id="js-black-bg2"></div>
+</div>
+<img onClick="popupImage2()" id="js-show-popup2" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Almost_black_square_020305.png" height="20%">
+<div style="padding:3px;"></div>
+
+
+
+
+<div class="popup3" id="js-popup3">
+  <div class="popup-inner3">
+
+    <font face="sans-serif" style="font-size:35px;">
+pop3
+  </div>
+  <div class="black-background3" id="js-black-bg3"></div>
+</div>
+<img onClick="popupImage3()" id="js-show-popup3" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Almost_black_square_020305.png" height="20%">
+<div style="padding:3px;"></div>
+
+
+<div class="popup4" id="js-popup4">
+  <div class="popup-inner4">
+
+    <font face="sans-serif" style="font-size:35px;">
+pop4
+  </div>
+  <div class="black-background4" id="js-black-bg4"></div>
+</div>
+<img onClick="popupImage4()" id="js-show-popup4" src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Almost_black_square_020305.png" height="20%">
+<div style="padding:3px;"></div>
+
+
+<style>
+.btn{
+margin-right: 20px;
+  margin-left: auto;
+    display: block;
+    width: 250px;
+    background: transparent;
+    border: 2px solid #FFF;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 120%;
+    font-weight: bold;
+}
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: .6s;
+}
+.popup.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  max-width: 600px;
+  padding: 50px;
+  background-color: #fff;
+  z-index: 2;
+}
+.popup-inner img {
+  width: 100%;
+}
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.close-btn i {
+  font-size: 20px;
+  color: #333;
+}
+.black-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 1;
+  cursor: pointer;
+}
+</style>
+<script>
+function popupImage() {
+  var popup = document.getElementById('js-popup');
+  if(!popup) return;
+
+  var blackBg = document.getElementById('js-black-bg');
+  var closeBtn = document.getElementById('js-close-btn');
+  var showBtn = document.getElementById('js-show-popup');
+
+  closePopUp(blackBg);
+  closePopUp(closeBtn);
+  closePopUp(showBtn);
+  function closePopUp(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      popup.classList.toggle('is-show');
+    });
+  }
+}
+popupImage();
+</script>
+
+<style>
+.btn2{
+margin-right: 20px;
+  margin-left: auto;
+    display: block;
+    width: 250px;
+    background: transparent;
+    border: 2px solid #FFF;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 120%;
+    font-weight: bold;
+}
+.popup2 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: .6s;
+}
+.popup2.is-show2 {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-inner2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  max-width: 600px;
+  padding: 50px;
+  background-color: #fff;
+  z-index: 2;
+}
+.popup-inner2 img {
+  width: 100%;
+}
+.close-btn2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.close-btn2 i {
+  font-size: 20px;
+  color: #333;
+}
+.black-background2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 1;
+  cursor: pointer;
+}
+</style>
+<script>
+function popupImage2() {
+  var popup2 = document.getElementById('js-popup2');
+  if(!popup2) return;
+
+  var blackBg2 = document.getElementById('js-black-bg2');
+  var closeBtn2 = document.getElementById('js-close-btn2');
+  var showBtn2 = document.getElementById('js-show-popup2');
+
+  closePopUp2(blackBg2);
+  closePopUp2(closeBtn2);
+  closePopUp2(showBtn2);
+  function closePopUp2(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      popup2.classList.toggle('is-show2');
+    });
+  }
+}
+popupImage2();
+</script>
+
+
+<style>
+.btn3{
+margin-right: 20px;
+  margin-left: auto;
+    display: block;
+    width: 250px;
+    background: transparent;
+    border: 2px solid #FFF;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 120%;
+    font-weight: bold;
+}
+.popup3 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: .6s;
+}
+.popup3.is-show3 {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-inner3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  max-width: 600px;
+  padding: 50px;
+  background-color: #fff;
+  z-index: 2;
+}
+.popup-inner3 img {
+  width: 100%;
+}
+.close-btn3 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.close-btn3 i {
+  font-size: 20px;
+  color: #333;
+}
+.black-background3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 1;
+  cursor: pointer;
+}
+</style>
+<script>
+function popupImage3() {
+  var popup3= document.getElementById('js-popup3');
+  if(!popup3) return;
+
+  var blackBg3 = document.getElementById('js-black-bg3');
+  var closeBtn3 = document.getElementById('js-close-btn3');
+  var showBtn3 = document.getElementById('js-show-popup3');
+
+  closePopUp3(blackBg3);
+  closePopUp3(closeBtn3);
+  closePopUp3(showBtn3);
+  function closePopUp3(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      popup3.classList.toggle('is-show3');
+    });
+  }
+}
+popupImage3();
+</script>
+
+
+<style>
+.btn4{
+margin-right: 20px;
+  margin-left: auto;
+    display: block;
+    width: 250px;
+    background: transparent;
+    border: 2px solid #FFF;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 120%;
+    font-weight: bold;
+}
+.popup4 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: .6s;
+}
+.popup4.is-show4 {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-inner4 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  max-width: 600px;
+  padding: 50px;
+  background-color: #fff;
+  z-index: 2;
+}
+.popup-inner4 img {
+  width: 100%;
+}
+.close-btn4 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.close-btn4 i {
+  font-size: 20px;
+  color: #333;
+}
+.black-background4 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.8);
+  z-index: 1;
+  cursor: pointer;
+}
+</style>
+<script>
+function popupImage4() {
+  var popup4= document.getElementById('js-popup4');
+  if(!popup4) return;
+
+  var blackBg4 = document.getElementById('js-black-bg4');
+  var closeBtn4 = document.getElementById('js-close-btn4');
+  var showBtn4 = document.getElementById('js-show-popup4');
+
+  closePopUp4(blackBg4);
+  closePopUp4(closeBtn4);
+  closePopUp4(showBtn4);
+  function closePopUp4(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      popup4.classList.toggle('is-show4');
+    });
+  }
+}
+popupImage4();
+</script>
